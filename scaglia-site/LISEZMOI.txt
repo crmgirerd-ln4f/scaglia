@@ -1,0 +1,15 @@
+Team Support, édition Scaglia Racing Team (démonstration pour une écurie fictive)
+
+Même outil que la version LN4 Fusion, mêmes fonctions, même sécurité. Seuls changent :
+  le nom d'équipe par défaut (Scaglia Racing Team), le nom de l'équipe de démo,
+  les couleurs par défaut (rosso, giallo, blanc), le motif de fond et le logo par défaut,
+  les titres de la présentation (#demo et #demo-fr).
+
+À déposer sur GitHub dans un dépôt séparé (par exemple team-support-scaglia), relié à un site Netlify séparé :
+  netlify.toml            réglages Netlify (le site est dans le dossier public)
+  package.json            dépendance de la fonction de synchronisation
+  netlify/functions/      la fonction serveur qui garde la copie d'équipe chiffrée
+  public/                 le site : index.html, _headers, robots.txt
+
+Un site séparé veut dire des données séparées : code d'équipe, code administrateur, verrou et copie d'équipe
+n'ont rien en commun avec le site LN4 Fusion.
